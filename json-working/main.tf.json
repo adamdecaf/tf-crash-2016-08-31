@@ -1,10 +1,13 @@
 {
   "module": {
     "a": {
+      "source": "./a/",
       "foo": "${element(split(\",\", var.hosts), 0)}"
     }
   },
   "variable": {
-    "hosts": "web1.example.com,web2.example.com"
+    "hosts": {
+      "default": "web1.example.com,web2.example.com"
+    }
   }
 }
